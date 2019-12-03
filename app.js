@@ -1,19 +1,19 @@
-const Koa  = require("koa")
+const Koa = require("koa")
 
 const Router = require("koa-router")
 
-const app  = new Koa()
+const app = new Koa()
 
 const router = new Router()
 
 // app.use( async ctx => ctx.body = 'hello koa')
 
 //router test
-router.get('/' ,(ctx) => ctx.body = 'Im /')
+router.get('/', (ctx) => ctx.body = 'Im /')
 
-router.get('/index',(ctx) => ctx.body = 'Im index')
+router.get('/index', (ctx) => ctx.body = 'Im index')
 
-router.get('/news',(ctx) => ctx.body = 'Im news')
+router.get('/news', (ctx) => ctx.body = 'Im news')
 
 
 
