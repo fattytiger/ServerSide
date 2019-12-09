@@ -6,6 +6,8 @@ const app = new Koa()
 
 const router = new Router()
 
+const Render = require('koa-ejs')
+
 // app.use( async ctx => ctx.body = 'hello koa')
 
 //router test
