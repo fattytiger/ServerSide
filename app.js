@@ -23,13 +23,18 @@ render(app,{
 // app.use( async ctx => ctx.body = 'hello koa')
 
 //router test
-router.get('/', async ctx => {
+router.all('/', async ctx => {
     await ctx.render('../pages/index')
 })
-
-router.get('/index', (ctx) => ctx.body = 'Im index')
-
-router.get('/news', (ctx) => ctx.body = 'Im news')
+    .all('/product', async ctx => {
+    await ctx.render('../pages/product')
+    })
+    .all('/blog', async ctx => {
+        await ctx.render(`../pages/blog`)
+    })
+    .all(`/team`, async ctx => {
+        await ctx.render(`../pages/team`)
+    })
 
 
 
