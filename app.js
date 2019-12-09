@@ -6,10 +6,26 @@ const app = new Koa()
 
 const router = new Router()
 
+const render = require('koa-ejs')
+
+const path = require('path')
+
+render(app,{
+    root:path.join(__dirname,`view/master-page`),
+    layout: `master`,
+    viewExt:`html`,
+    cache:false,
+    debug:false
+})
+
+
+
 // app.use( async ctx => ctx.body = 'hello koa')
 
 //router test
-router.get('/', (ctx) => ctx.body = 'Im /')
+router.get('/', async ctx => {
+    await ctx.render('../pages/index')
+})
 
 router.get('/index', (ctx) => ctx.body = 'Im index')
 

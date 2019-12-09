@@ -9,7 +9,9 @@
   "author": "fattytiger",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "koa": "^2.11.0",
+    "koa-ejs": "^4.3.0",
     "koa-router": "^7.4.0"
   }
 }
