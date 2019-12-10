@@ -7,11 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <title>hello koa</title>
-  </head>
+  </head> 
   <body>
-    <% include ../templates/navbar.html %>
-    <div class="container">
-        <%- body %>
+    {{include './../templates/navbar.html' }} 
+    <div class="container text-primary">
+        {{each list}}
+        {{$index}} {{value}}
+    {{/each}}
+
+    {{obj.name}}
+
+    {{@ val}}
     </div>
   </body>
 

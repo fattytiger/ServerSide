@@ -9,11 +9,13 @@
   "author": "fattytiger",
   "license": "ISC",
   "dependencies": {
+    "art-template": "^4.13.2",
     "bootstrap": "^4.4.1",
     "install": "^0.13.0",
     "jquery": "^3.4.1",
     "jquery.js": "0.0.2-security",
     "koa": "^2.11.0",
+    "koa-art-template": "^1.1.1",
     "koa-ejs": "^4.3.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
