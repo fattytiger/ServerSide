@@ -10,6 +10,9 @@ const render = require('koa-ejs')
 
 const path = require('path')
 
+const server = require('koa-static')
+
+
 render(app,{
     root:path.join(__dirname,`view/master-page`),
     layout: `master`,
@@ -18,9 +21,8 @@ render(app,{
     debug:false
 })
 
-
-
-// app.use( async ctx => ctx.body = 'hello koa')
+app.use(server(__dirname+`/node_modules/bootstrap`))
+console.log(__dirname+`/node_modules/bootstrap`)
 
 //router test
 router.all('/', async ctx => {
@@ -40,5 +42,5 @@ router.all('/', async ctx => {
 
 //when you want to use the router.routes,you need to regist the router first
 app.use(router.routes())
-
-app.listen(3000)
+const port = 3000
+app.listen(port)
