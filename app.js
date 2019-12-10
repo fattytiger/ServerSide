@@ -22,7 +22,8 @@ render(app,{
 })
 
 app.use(server(__dirname+`/node_modules/bootstrap`))
-console.log(__dirname+`/node_modules/bootstrap`)
+app.use(server(__dirname+`/node_modules/jquery`))
+app.use(server(__dirname+`/node_modules/popper.js`))
 
 //router test
 router.all('/', async ctx => {
